@@ -1,9 +1,25 @@
-TypeScript Snowpack React Demo
-=================================
+TypeScript Snowpack React Typescript Paths Alias Demo
+=====================================================
 
-使用snowpack来开发react，体验不错，配置简单、速度快、fast refresh
+如果在tsconfig.json中定义了`paths`，比如：
 
-注意：导入文件时大小写一定要完全匹配，否则修改后不生效，卡了几个小时
+```
+"paths": {
+  "#src/*": [
+    "./src/*"
+  ]
+}
+```
+
+则可以在`snowpack.config.js`中定义`alias`:
+
+```
+alias: {
+  '#src': './src/'
+}
+```
+
+与之相应。
 
 ```
 npm install
